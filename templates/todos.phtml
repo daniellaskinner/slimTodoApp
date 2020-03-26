@@ -1,0 +1,10 @@
+<html>
+    <h1>Nelly's to-do list</h1>
+    <h4>
+        <?php
+            foreach($todos as $todo) {
+                echo $todo['id'] . ' ' . $todo['todo'];
+            }
+        ?>
+    </h4>
+</html>

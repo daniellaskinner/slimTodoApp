@@ -2,7 +2,7 @@
 
 namespace TodoApp\Models;
 
-class PokemonModel
+class TodoModel
 {
     private $dbConnection;
 

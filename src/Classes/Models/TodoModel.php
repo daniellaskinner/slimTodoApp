@@ -17,4 +17,12 @@ class TodoModel
         $query->execute();
         return $query->fetchAll();
     }
+
+    public function createTodo($newTodo)
+    {
+        $query = $this->dbConnection->prepare('INSERT INTO `todoList` (`todo`) VALUES (:todo) ');
+        $query->bindParam(':todo', $newTodo);
+        return $query->execute();
+    }
 }
+

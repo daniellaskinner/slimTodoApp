@@ -16,5 +16,6 @@ return function (App $app) {
     });
 
     $app->get('/todos', 'SeeAllTodosController');
+    $app->post('/todos', 'AddTodoController');
 
 };

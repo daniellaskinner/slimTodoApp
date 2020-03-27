@@ -6,7 +6,13 @@
 </head>
 
 <h1>Nelly's to-do list</h1>
-    <main>
+    <h2>Add a todo</h2>
+    <form method="post">
+        <input type="text" name="newTodo" formmethod="post" placeholder="Add a todo">
+        <input type="submit" name="submit">
+    </form>
+
+<main>
         <div class="todo-board">
             <h3>To-dos</h3>
             <?php
@@ -18,6 +24,9 @@
 
         <div class="done">
             <h3>Done</h3>
+            <?php
+                echo $newTodo;
+            ?>
         </div>
     </main>
 </html>

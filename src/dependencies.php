@@ -20,5 +20,6 @@ return function (App $app) {
 
     $container['TodoModel'] = new TodoApp\Factories\TodoModelFactory();
     $container['SeeAllTodosController'] = new TodoApp\Factories\SeeAllTodosControllerFactory();
+    $container['AddTodoController'] = new TodoApp\Factories\AddTodoControllerFactory();
 
 };

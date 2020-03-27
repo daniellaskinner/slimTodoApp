@@ -15,6 +15,6 @@ return function (App $app) {
         return $container->get('renderer')->render($response, 'index.phtml', $args);
     });
 
-    $app->get('/todos', 'seeAllTodosController');
+    $app->get('/todos', 'SeeAllTodosController');
 
 };

@@ -6,7 +6,7 @@ use TodoApp\Models\TodoModel;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-    class SeeAllTodosController
+class SeeAllTodosController
 {
     private $renderer;
     private $TodoModel;
@@ -16,7 +16,6 @@ use Slim\Http\Response;
         $this->renderer = $renderer;
         $this->TodoModel = $TodoModel;
     }
-
 
     public function __invoke(Request $request, Response $response, $args)
     {

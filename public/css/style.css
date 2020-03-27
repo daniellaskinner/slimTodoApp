@@ -1,3 +1,43 @@
 * {
-    color: red;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    font-family: verdana;
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+main {
+    width: 90%;
+    border: 3px solid black;
+    overflow: auto;
+    background-image: url("./public/images/corkBoard.jpg");
+}
+
+.todo-board {
+    background-color: white;
+    width: 48%;
+    padding: 5px;
+    float: left;
+}
+
+.done {
+    background-color: white;
+    float: right;
+    width: 48%;
+    padding: 5px;
+}
+
+.todo {
+    font-size: 13px;
+    background-image: ;
+    width: 90%;
+    height: 10%;
+    padding: 5px;
 }

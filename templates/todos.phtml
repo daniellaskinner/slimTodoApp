@@ -1,10 +1,23 @@
 <html>
-    <h1>Nelly's to-do list</h1>
-    <h4>
-        <?php
+<head>
+    <title>To-do list app!</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<h1>Nelly's to-do list</h1>
+    <main>
+        <div class="todo-board">
+            <h3>To-dos</h3>
+            <?php
             foreach($todos as $todo) {
-                echo $todo['id'] . ' ' . $todo['todo'];
+                echo "<div class='todo'>" . $todo['id'] . ': ' . $todo['todo'] . '<br>' . '</div>';
             }
-        ?>
-    </h4>
+            ?>
+        </div>
+
+        <div class="done">
+            <h3>Done</h3>
+        </div>
+    </main>
 </html>

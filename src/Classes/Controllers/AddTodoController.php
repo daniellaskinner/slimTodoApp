@@ -19,7 +19,8 @@ class AddTodoController
         $formInput = $request->getParsedBody();
         //the http body gets stored as an assoc array
         $newTodo = $formInput['newTodo'];
-        $this->TodoModel->createTodo($newTodo);
+        $sanitisedTodo = $this->TodoModel->validateTodos($newTodo);
+        $this->TodoModel->createTodo($sanitisedTodo);
         return $response->withRedirect('/todos');
         //makes a GET request to /todos (reloading the page)
     }

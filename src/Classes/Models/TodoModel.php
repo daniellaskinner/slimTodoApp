@@ -11,6 +11,16 @@ class TodoModel
         $this->dbConnection = $dbConnection;
     }
 
+    public function validateTodos($input)
+    {
+        $trimmedTodo = trim($input);
+        $replaceSpaceWithComma = str_replace(' ', ',', $trimmedTodo);
+        $array = explode(",", $replaceSpaceWithComma);
+        $string = implode (  " " , $array );
+        $sanitised = preg_replace("/[^a-zA-Z0-9]/", " ", $string);
+        return filter_var($sanitised, FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+
     public function getAllTodos()
     {
         $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList` WHERE `deleted`=0');

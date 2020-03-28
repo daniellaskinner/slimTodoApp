@@ -13,7 +13,7 @@ class TodoModel
 
     public function getAllTodos()
     {
-        $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList`');
+        $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList` WHERE `deleted`=0');
         $query->execute();
         return $query->fetchAll();
     }
@@ -22,6 +22,13 @@ class TodoModel
     {
         $query = $this->dbConnection->prepare('INSERT INTO `todoList` (`todo`) VALUES (:todo) ');
         $query->bindParam(':todo', $newTodo);
+        return $query->execute();
+    }
+
+    public function deleteTodo($id)
+    {
+        $query = $this->dbConnection->prepare('UPDATE `todoList` SET `deleted`= 1 WHERE `id` = :id');
+        $query->bindParam(':id', $id);
         return $query->execute();
     }
 }

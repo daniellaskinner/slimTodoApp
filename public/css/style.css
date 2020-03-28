@@ -13,11 +13,17 @@ h1 {
     margin: 20px;
 }
 
+.addTodo {
+    text-align: center;
+}
+
 main {
     width: 90%;
     border: 3px solid black;
     overflow: auto;
     background-image: url("./public/images/corkBoard.jpg");
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .todo-board {
@@ -38,6 +44,14 @@ main {
     font-size: 13px;
     background-image: ;
     width: 90%;
-    height: 10%;
     padding: 5px;
+    overflow: auto;
+}
+
+.todo p {
+    color: hotpink;
+}
+
+.todo button {
+    float: left;
 }

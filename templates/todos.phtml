@@ -2,24 +2,28 @@
 <head>
     <title>To-do list app!</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/deleteTodo.js" defer></script>
 
 </head>
 
 <h1>Nelly's to-do list</h1>
-    <h2>Add a todo</h2>
+<div class="addTodo">
+    <h2 id="test">Add a todo</h2>
     <form method="post">
         <input type="text" name="newTodo" formmethod="post" placeholder="Add a todo">
         <input type="submit" name="submit">
     </form>
+</div>
+
 
 <main>
         <div class="todo-board">
             <h3>To-dos</h3>
-            <?php
-            foreach($todos as $todo) {
-                echo "<div class='todo'>" . $todo['id'] . ': ' . $todo['todo'] . '<br>' . '</div>';
-            }
-            ?>
+                <?php
+                foreach($todos as $todo) {
+                    echo "<div class='todo'>" . '<p>' . $todo['id'] . ': ' . $todo['todo'] . '</p>' . "<button name='delete'>Delete</button>" . '</div>';
+                }
+                ?>
         </div>
 
         <div class="done">

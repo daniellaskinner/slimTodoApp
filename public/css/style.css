@@ -3,9 +3,9 @@
     margin: 0 auto;
 }
 
-html {
+body {
     font-family: verdana;
-    background-color: lightblue;
+    background-image: url("../images/corkBoard.jpg");
 }
 
 h1 {
@@ -21,7 +21,6 @@ main {
     width: 90%;
     border: 3px solid black;
     overflow: auto;
-    background-image: url("./public/images/corkBoard.jpg");
     margin-top: 30px;
     margin-bottom: 50px;
 }

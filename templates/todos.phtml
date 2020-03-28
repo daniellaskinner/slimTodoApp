@@ -21,7 +21,7 @@
             <h3>To-dos</h3>
                 <?php
                 foreach($todos as $todo) {
-                    echo "<div class='todo'>" . '<p>' . $todo['id'] . ': ' . $todo['todo'] . '</p>' . "<button name='delete'>Delete</button>" . '</div>';
+                    echo "<div class='todo'>" . '<p>' . $todo['todo'] . '</p>' . "<button name='delete' class='btn-delete' data-id='" . $todo['id'] . "' " . "data-todo='" . $todo['todo'] . "'>Delete</button>" . '</div>';
                 }
                 ?>
         </div>

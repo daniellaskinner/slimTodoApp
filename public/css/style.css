@@ -11,10 +11,34 @@ body {
 h1 {
     text-align: center;
     margin: 20px;
+    color: floralwhite;
+}
+
+h2 {
+    color: lightblue;
+}
+
+h3 {
+    color: lightpink;
+    margin-left: 10px;
 }
 
 .addTodo {
     text-align: center;
+}
+
+form input {
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: lightblue;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background-color: white;
+    color: lightblue;
 }
 
 main {
@@ -26,31 +50,43 @@ main {
 }
 
 .todo-board {
-    background-color: white;
-    width: 48%;
+    width: 50%;
     padding: 5px;
     float: left;
 }
 
 .done {
-    background-color: white;
     float: right;
-    width: 48%;
+    width: 50%;
     padding: 5px;
 }
 
 .todo {
     font-size: 13px;
-    background-image: ;
-    width: 90%;
+    width: 100px;
+    height: 100px;
     padding: 5px;
     overflow: auto;
+    color: #000;
+    background: #ffc;
+    border: 1px solid #ffc;
+    margin: 10px;
+    float: left;
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
 .todo p {
-    color: hotpink;
+    /*color: hotpink;*/
 }
 
-.todo button {
-    float: left;
+.btn-delete {
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
 }

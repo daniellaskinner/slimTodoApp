@@ -21,23 +21,29 @@
         <div class="todo-board">
             <h3>To-dos</h3>
                 <?php
-                foreach($todos as $todo) {
-                    echo "<div class='todo'>"
-                        . '<p>' . $todo['todo'] . '</p>'
-                        . "<button name='delete' class='btn-delete' data-id='" . $todo['id'] . "' "
-                        . "data-todo='" . $todo['todo']
-                        . "'>Delete</button>"
-                        . "<button name = 'complete' class='btn-complete' data-id='" . $todo['id']
-                        . "'>Completed</button>"
-                        . '</div>';
-                }
+                    foreach($todos as $todo) {
+                        echo "<div class='todo'>"
+                            . "<p>" . $todo['todo'] . "</p>"
+                            . "<button name='delete' class='btn-delete' data-id='" . $todo['id'] . "' "
+                            . "data-todo='" . $todo['todo']
+                            . "'>Delete</button>"
+                            . "<button name = 'complete' class='btn-complete' data-id='" . $todo['id']
+                            . "'>Completed</button>"
+                            . '</div>';
+                    }
                 ?>
         </div>
 
         <div class="done">
             <h3>Done</h3>
             <?php
-                echo $newTodo;
+            var_dump($completedTodos);
+
+//                foreach($completedTodos as $completedTodo) {
+//                    echo "<div class='todo'>"
+//                        . "<p>" . $completedTodo['todo'] . "</p>"
+//                        . "</div>";
+//                }
             ?>
         </div>
     </main>

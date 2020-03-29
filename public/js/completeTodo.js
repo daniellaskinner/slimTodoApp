@@ -5,7 +5,7 @@ let completeButtons = document.querySelectorAll('.btn-complete');
 completeButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         let id = e.target.dataset.id;
-        fetch('/todos', {
+        fetch('/todos/complete', {
             method: 'PUT',
             body: JSON.stringify({"id": id}),
             headers: {

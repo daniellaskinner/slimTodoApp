@@ -18,5 +18,6 @@ return function (App $app) {
     $app->get('/todos', 'SeeAllTodosController');
     $app->post('/todos', 'AddTodoController');
     $app->delete('/todos', 'DeleteTodoController');
-    $app->put('/todos', 'CompleteTodoController');
+    $app->put('/todos/complete', 'CompleteTodoController');
+    $app->get('/todos/completed', 'DisplayCompletedTodosController');
 };

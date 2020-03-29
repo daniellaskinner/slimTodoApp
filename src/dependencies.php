@@ -23,4 +23,5 @@ return function (App $app) {
     $container['AddTodoController'] = new TodoApp\Factories\AddTodoControllerFactory();
     $container['DeleteTodoController'] = new TodoApp\Factories\DeleteTodoControllerFactory();
     $container['CompleteTodoController'] = new TodoApp\Factories\CompleteTodoControllerFactory();
+    $container['DisplayCompletedTodosController'] = new TodoApp\Factories\DisplayCompletedTodosControllerFactory();
 };

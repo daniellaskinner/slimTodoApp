@@ -3,7 +3,7 @@
 namespace TodoApp\Factories;
 
 use Psr\Container\ContainerInterface;
-use TodoApp\Controllers\DeleteTodoController;
+use TodoApp\Controllers\CompleteTodoController;
 
 class CompleteTodoControllerFactory
  {

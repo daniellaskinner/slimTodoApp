@@ -18,14 +18,10 @@ class CompleteTodoController
     {
         //get the post data out of the http body, this comes back as an assoc array with the keys as the field names in DB
         $postData = $request->getParsedBody();
-
-        //grab the todos by id
+        //grab all data from array with a keys of id (todos)
         $id = $postData['id'];
-
         //run the completed method on them to only show todos with completed = 1
         $this->TodoModel->completeTodo($id);
-
-
         return $response->withRedirect('/todos');
     }
 }

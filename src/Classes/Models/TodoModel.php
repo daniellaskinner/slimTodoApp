@@ -23,7 +23,7 @@ class TodoModel
 
     public function getAllTodos()
     {
-        $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList` WHERE `deleted`=0');
+        $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList` WHERE `deleted`=0 AND `completed`=0');
         $query->execute();
         return $query->fetchAll();
     }
@@ -40,6 +40,20 @@ class TodoModel
         $query = $this->dbConnection->prepare('UPDATE `todoList` SET `deleted`= 1 WHERE `id` = :id');
         $query->bindParam(':id', $id);
         return $query->execute();
+    }
+
+    public function completeTodo($id)
+    {
+        $query = $this->dbConnection->prepare('UPDATE `todoList` SET `completed`= 1 WHERE `id` = :id');
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
+
+    public function getCompletedTodos()
+    {
+        $query = $this->dbConnection->prepare('SELECT `id`, `todo` FROM `todoList` WHERE `deleted`=0 AND `completed`=1');
+        $query->execute();
+        return $query->fetchAll();
     }
 }
 

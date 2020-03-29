@@ -79,9 +79,9 @@ main {
     -moz-transform:rotate(-6deg);
 }
 
-.btn-delete {
+.btn-delete, .btn-complete {
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 5px;
 }
 

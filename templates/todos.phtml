@@ -37,13 +37,14 @@
         <div class="done">
             <h3>Done</h3>
             <?php
-            var_dump($completedTodos);
-
-//                foreach($completedTodos as $completedTodo) {
-//                    echo "<div class='todo'>"
-//                        . "<p>" . $completedTodo['todo'] . "</p>"
-//                        . "</div>";
-//                }
+                foreach($completedTodos as $completedTodo) {
+                    echo "<div class='todo'>"
+                        . "<p>" . $completedTodo['todo'] . "</p>"
+                        . "<button name='delete' class='btn-delete' data-id='" . $todo['id'] . "' "
+                        . "data-todo='" . $todo['todo']
+                        . "'>Delete</button>"
+                        . "</div>";
+                }
             ?>
         </div>
     </main>
